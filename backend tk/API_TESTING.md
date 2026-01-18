@@ -22,7 +22,7 @@ x-bot-secret: <your-bot-secret>
 ```
 GET http://localhost:3000/api/bot/credits/+1234567890
 ```
-v
+
 **Response (200 OK):**
 ```json
 {
