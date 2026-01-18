@@ -24,7 +24,7 @@ GET http://localhost:3000/api/bot/credits/+1234567890
 ```all test
 
 **Response (200 OK):**
-```json
+```jsonn
 {
   "status": "SUCCESS",
   "message": "You have 3 credits remaining.",
