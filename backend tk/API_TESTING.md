@@ -18,12 +18,11 @@ All bot routes require `x-bot-secret` header. Add this header in Postman/Insomni
 ```
 x-bot-secret: <your-bot-secret>
 ```
-//jj
 **Example:**
 ```
 GET http://localhost:3000/api/bot/credits/+1234567890
 ```
-
+v
 **Response (200 OK):**
 ```json
 {
