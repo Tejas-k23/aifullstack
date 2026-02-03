@@ -14,7 +14,7 @@ const HeroSection = () => {
   }, [mobileImages.length]);
 
   return (
-    <section className="hero" id="home">
+    <section className="hero " id="home">
       <div className="container">
         <div className="hero-wrapper">
           <div className="hero-content">
@@ -43,7 +43,7 @@ const HeroSection = () => {
           </div>
           <div className="hero-image">
             <div className="phone-mockup">
-              <div className="phone-images-container">
+              <div className="phone-images-container ">
                 {mobileImages.map((image, index) => (
                   <img 
                     key={index}

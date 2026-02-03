@@ -10,7 +10,7 @@ const FeatureShowcaseSections = () => {
         <div className="container">
           <h2 className="section-heading-above">Pixeltouch pro features</h2>
           <div className="feature-showcase-container">
-            <div className="showcase-feature-card">
+            <div className="showcase-feature-card reverse">
               <div className="feature-content-left">
                 <span className="feature-label">Background Remove</span>
                 <h2 className="feature-heading">Instant background removal with us</h2>

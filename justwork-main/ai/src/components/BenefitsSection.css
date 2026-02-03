@@ -49,11 +49,12 @@
 .benefit-icon-wrapper {
   width: 64px;
   height: 64px;
-  border-radius: 16px;
+  /* background-color: black !important; */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  /* color: #fff; */
   margin-bottom: 16px;
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
@@ -234,7 +235,7 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: #fafafa;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -393,4 +394,7 @@
     height: 36px;
     font-size: 18px;
   }
+}
+.benefit-icon-wrapper {
+  background: none !important;
 }

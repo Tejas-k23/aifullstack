@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
               <div className="testimonial-header">
                 <div className="stars">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="star">★</span>
+                    <span key={i} className="star"><i class="fa-sharp fa-solid fa-star"></i></span>
                   ))}
                 </div>
                 <span className="platform-label">{testimonial.platform}</span>

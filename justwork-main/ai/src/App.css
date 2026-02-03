@@ -11,7 +11,6 @@
 /* Ensure sections with white backgrounds have proper z-index */
 .app > * {
   position: relative;
-  z-index: 1;
 }
 
 /* Reusable Container Class */

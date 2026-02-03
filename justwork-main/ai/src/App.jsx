@@ -16,8 +16,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="app">
-      <Navigation />
+    <div className="app ">
+      <Navigation  />
       <HeroSection />
       <MissionSection />
       <FeaturesSection />

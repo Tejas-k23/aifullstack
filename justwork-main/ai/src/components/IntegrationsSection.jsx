@@ -217,7 +217,19 @@ const IntegrationsSection = () => {
               <div className="icon-row icon-row-top">
                 {iconColors.slice(0, 5).map((color, i) => (
                   <div key={`top-${i}`} className="app-icon" style={{ background: color }}>
-                    <div className="icon-content"></div>
+                    {i === 0 ? (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" fill="white"/>
+                      </svg>
+                    ) : i === 1 ? (
+                      <span style={{ fontSize: '20px', fontWeight: 'bold', color: 'white' }}>G</span>
+                    ) : i === 2 ? (
+                      <span style={{ fontSize: '20px', fontWeight: 'bold', color: 'white' }}>P</span>
+                    ) : i === 3 ? (
+                      <span style={{ fontSize: '20px', fontWeight: 'bold', color: 'white' }}>C</span>
+                    ) : (
+                      <i className="fas fa-brain" style={{ fontSize: '20px', color: 'white' }}></i>
+                    )}
                   </div>
                 ))}
               </div>
@@ -226,7 +238,17 @@ const IntegrationsSection = () => {
               <div className="icon-row icon-row-bottom">
                 {iconColors.slice(5, 10).map((color, i) => (
                   <div key={`bottom-${i}`} className="app-icon" style={{ background: color }}>
-                    <div className="icon-content"></div>
+                    {i === 0 ? (
+                      <i className="fas fa-robot" style={{ fontSize: '20px', color: 'white' }}></i>
+                    ) : i === 1 ? (
+                      <i className="fas fa-magic" style={{ fontSize: '20px', color: 'white' }}></i>
+                    ) : i === 2 ? (
+                      <i className="fas fa-cogs" style={{ fontSize: '20px', color: 'white' }}></i>
+                    ) : i === 3 ? (
+                      <i className="fas fa-lightbulb" style={{ fontSize: '20px', color: 'white' }}></i>
+                    ) : (
+                      <i className="fas fa-code" style={{ fontSize: '20px', color: 'white' }}></i>
+                    )}
                   </div>
                 ))}
               </div>
@@ -234,7 +256,7 @@ const IntegrationsSection = () => {
               {/* Central AI Card */}
               <div className="central-hub">
                 <div className="hub-icon">
-                  <div className="hub-content"></div>
+                  <i className="fab fa-whatsapp" style={{ fontSize: '40px', color: '#25D366' }}></i>
                 </div>
               </div>
             </div>

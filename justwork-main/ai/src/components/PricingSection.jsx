@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './PricingSection.css';
+import Modal from './Modal';
 
 const PricingSection = () => {
   const [isYearly, setIsYearly] = useState(false);
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
 
   const plans = [
@@ -63,12 +65,21 @@ const PricingSection = () => {
     }
   ];
 
-  const handlePayment = async (packageId, planName) => {
-    if (!phoneNumber) {
-      alert('Please enter your phone number');
-      return;
+  const handlePlanSelect = (plan) => {
+    setSelectedPlan(plan);
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    if (isProcessing) return;
+  };
+
+  const handleProceed = async (whatsappNumber) => {
+    if (!selectedPlan || isProcessing) return;
 
     setIsProcessing(true);
 
@@ -78,8 +89,8 @@ const PricingSection = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
-          package_id: packageId, 
-          phone_number: phoneNumber 
+          package_id: selectedPlan.packageId, 
+          phone_number: whatsappNumber 
         })
       });
 
@@ -88,7 +99,14 @@ const PricingSection = () => {
         throw new Error(errorData.message || 'Failed to create order');
       }
 
-      const orderData = await response.json();
+      const orderResponse = await response.json();
+      
+      // Extract data from response wrapper
+      if (!orderResponse.data) {
+        throw new Error(orderResponse.message || 'Invalid response from server');
+      }
+      
+      const orderData = orderResponse.data;
 
       // 2. Initialize Razorpay checkout
       const options = {
@@ -97,7 +115,7 @@ const PricingSection = () => {
         currency: orderData.currency,
         order_id: orderData.order_id,
         name: 'MyWork AI',
-        description: `Upgrade to ${planName}`,
+        description: `Upgrade to ${selectedPlan.name}`,
         handler: async function (response) {
           // 3. Verify payment on backend - Pointing to Port 3000
           try {
@@ -108,18 +126,19 @@ const PricingSection = () => {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
-                phone_number: phoneNumber,
-                package_id: packageId
+                phone_number: whatsappNumber,
+                package_id: selectedPlan.packageId
               })
             });
 
-            const result = await verifyResponse.json();
+            const verifyResult = await verifyResponse.json();
             
-            if (verifyResponse.ok) {
-              alert(`Payment successful! Credits added: ${result.credits_added || '100'}`);
+            if (verifyResponse.ok && verifyResult.status === 'SUCCESS') {
+              const creditsAdded = verifyResult.data?.credits_added || verifyResult.data?.remaining_credits || 'N/A';
+              alert(`Payment successful! Credits added: ${creditsAdded}`);
               window.location.reload(); // Refresh to show new credits
             } else {
-              alert('Payment verification failed: ' + result.message);
+              alert('Payment verification failed: ' + (verifyResult.message || 'Unknown error'));
             }
           } catch (verifyError) {
             console.error('Verification Request Error:', verifyError);
@@ -127,7 +146,7 @@ const PricingSection = () => {
           }
         },
         prefill: {
-          contact: phoneNumber
+          contact: whatsappNumber
         },
         theme: {
           color: "#3399cc"
@@ -141,6 +160,7 @@ const PricingSection = () => {
 
       const rzp = new window.Razorpay(options);
       rzp.open();
+      setIsModalOpen(false); // Close modal after opening payment
 
     } catch (error) {
       console.error('Payment initialization error:', error);
@@ -151,31 +171,10 @@ const PricingSection = () => {
   };
 
   return (
-    <section className="pricing-section" id="pricing">
+    <section className="pricing-section " id="pricing">
       <div className="container">
         <div className="pricing-container">
           <h2 className="pricing-heading">Simple pricing</h2>
-          
-          <div className="phone-input-container" style={{ marginBottom: '30px', textAlign: 'center' }}>
-            <label htmlFor="phone" style={{ display: 'block', marginBottom: '10px', color: '#666' }}>
-              Enter phone number for credit allocation:
-            </label>
-            <input
-              id="phone"
-              type="tel"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              placeholder="e.g. 9876543210"
-              style={{ 
-                padding: '12px 20px', 
-                borderRadius: '8px', 
-                border: '1px solid #ddd',
-                fontSize: '16px',
-                width: '100%',
-                maxWidth: '300px'
-              }}
-            />
-          </div>
           
           <div className="toggle-container">
             <span className={!isYearly ? 'toggle-label active' : 'toggle-label'}>Monthly</span>
@@ -212,7 +211,7 @@ const PricingSection = () => {
                   
                   <button 
                     className={`plan-button ${plan.buttonStyle}`}
-                    onClick={() => plan.price > 0 ? handlePayment(plan.packageId, plan.name) : alert('Free plan active')}
+                    onClick={() => plan.price > 0 ? handlePlanSelect(plan) : alert('Free plan active')}
                     disabled={isProcessing}
                   >
                     {isProcessing ? 'Processing...' : plan.buttonText}
@@ -229,6 +228,12 @@ const PricingSection = () => {
           </div>
         </div>
       </div>
+      <Modal 
+        isOpen={isModalOpen}
+        onClose={handleModalClose}
+        plan={selectedPlan}
+        onProceed={handleProceed}
+      />
     </section>
   );
 };
