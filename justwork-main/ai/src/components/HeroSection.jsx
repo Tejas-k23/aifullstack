@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Reveal from './Reveal';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -14,14 +15,18 @@ const HeroSection = () => {
   }, [mobileImages.length]);
 
   return (
-     
+
     <section className="hero " id="home">
-       {/* <div className="noise-overlay" aria-hidden="true"></div> */}
+      {/* <div className="noise-overlay" aria-hidden="true"></div> */}
       <div className="container">
         <div className="hero-wrapper">
           <div className="hero-content">
-            <h1>AI Product Ads on WhatsApp</h1>
-            <p>Send a product photo on WhatsApp. Get a professional marketing image in seconds.</p>
+            <Reveal>
+              <h1>AI Product Ads on WhatsApp</h1>
+            </Reveal>
+            <Reveal delay={0.4}>
+              <p>Send a product photo on WhatsApp. Get a professional marketing image in seconds.</p>
+            </Reveal>
             <a href="#download" className="btn-primary">Try Free (3 Credits)</a>
             <div className="social-proof">
               <div className="avatars">
@@ -47,7 +52,7 @@ const HeroSection = () => {
             <div className="phone-mockup">
               <div className="phone-images-container ">
                 {mobileImages.map((image, index) => (
-                  <img 
+                  <img
                     key={index}
                     src={image}
                     alt={`App Interface ${index + 1}`}

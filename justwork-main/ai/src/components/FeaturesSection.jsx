@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Wand2, Sliders, Zap, Sparkles } from 'lucide-react';
+import Reveal from './Reveal';
 import './FeaturesSection.css';
 
 const FeaturesSection = () => {
@@ -72,7 +73,7 @@ const FeaturesSection = () => {
 
   useEffect(() => {
     if (!isVisible) return;
-    
+
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
@@ -91,25 +92,26 @@ const FeaturesSection = () => {
       <div className="container">
         <div className={`features-container ${isVisible ? 'visible' : ''}`}>
           <div className="feature-grid">
-          {visibleFeatures.map((feature, index) => (
-            <div 
-              key={`${currentIndex}-${index}`}
-              className={`feature-card ${isAnimating ? 'swapping' : ''}`}
-            >
-              <div className="feature-content" style={{ background: feature.bgGradient }}>
-                <div className="icon-container">
-                  <div className="icon">
-                    {feature.icon}
+            {visibleFeatures.map((feature, index) => (
+              <Reveal key={`${currentIndex}-${index}`} delay={index * 0.2}>
+                <div
+                  className={`feature-card ${isAnimating ? 'swapping' : ''}`}
+                >
+                  <div className="feature-content" style={{ background: feature.bgGradient }}>
+                    <div className="icon-container">
+                      <div className="icon">
+                        {feature.icon}
+                      </div>
+                    </div>
+                    <Reveal><h3>{feature.title}</h3></Reveal>
+                    <Reveal delay={0.3}><p>{feature.description}</p></Reveal>
+                  </div>
+                  <div className="feature-image">
+                    <img src={feature.image} alt={feature.title} />
                   </div>
                 </div>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
-              <div className="feature-image">
-                <img src={feature.image} alt={feature.title} />
-              </div>
-            </div>
-          ))}
+              </Reveal>
+            ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 .features {
   background: var(--bg-secondary);
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .features-container {
@@ -46,12 +46,12 @@
 }
 
 .feature-content {
-  padding: 24px;
+  padding: 20px;
   background: #F8F9FB;
 }
 
 .icon-container {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .icon {
@@ -66,7 +66,7 @@
 }
 
 .feature-content h3 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 800;
   margin-bottom: 12px;
   color: #000;
@@ -81,7 +81,7 @@
 }
 
 .feature-image {
-  height: 150px;
+  height: 120px;
   overflow: hidden;
   background: #f0f0f0;
 }

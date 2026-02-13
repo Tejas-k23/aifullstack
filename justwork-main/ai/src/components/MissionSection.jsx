@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Reveal from './Reveal';
 import './MissionSection.css';
 
 const stats = [
@@ -80,7 +81,7 @@ const MissionSection = () => {
     const animate = () => {
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      
+
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
 
       setDisplayValues(
@@ -107,9 +108,11 @@ const MissionSection = () => {
     <section className="mission" id="about" ref={sectionRef}>
       <div className="container">
         <div className="mission-container">
-          <p ref={textRef} className={`mission-text ${isTextVisible ? 'visible' : ''}`}>
-            We're on a mission to help small businesses create <span className="highlight">professional marketing images</span> without design skills. With <span className="highlight">AI-powered</span> generation and WhatsApp convenience, ProductAI turns product photos into ad-ready visuals in seconds.
-          </p>
+          <Reveal width="100%">
+            <p ref={textRef} className={`mission-text ${isTextVisible ? 'visible' : ''}`}>
+              We're on a mission to help small businesses create <span className="highlight">professional marketing images</span> without design skills. With <span className="highlight">AI-powered</span> generation and WhatsApp convenience, ProductAI turns product photos into ad-ready visuals in seconds.
+            </p>
+          </Reveal>
           <div className="stats">
             {stats.map((stat, index) => (
               <div key={index} className="stat">
@@ -120,7 +123,9 @@ const MissionSection = () => {
               </div>
             ))}
           </div>
-          <h2 className="section-heading">How it works</h2>
+          <Reveal width="100%">
+            <h2 className="section-heading">How it works</h2>
+          </Reveal>
         </div>
       </div>
     </section>

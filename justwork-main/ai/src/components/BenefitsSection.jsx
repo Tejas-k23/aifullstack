@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Wand2, Palette, Smartphone, Share2 } from 'lucide-react';
+import Reveal from './Reveal';
 import './BenefitsSection.css';
 
 const BenefitsSection = () => {
@@ -47,11 +48,30 @@ const BenefitsSection = () => {
 
   return (
     <section className="benefits-section" id="benefits">
+      {/* Hidden SVG for gradients */}
+      <svg style={{ position: 'absolute', width: 0, height: 0, pointerEvents: 'none', opacity: 0 }} aria-hidden="true">
+        <defs>
+          <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#EC4899" />
+            <stop offset="100%" stopColor="#8B5CF6" />
+          </linearGradient>
+          <linearGradient id="blue-purple-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#8B5CF6" />
+            <stop offset="100%" stopColor="#7C3AED" />
+          </linearGradient>
+          <linearGradient id="purple-light-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#8B5CF6" />
+            <stop offset="100%" stopColor="#A78BFA" />
+          </linearGradient>
+        </defs>
+      </svg>
 
       <div className="noise-overlay" aria-hidden="true"></div>
       <div className="container">
         <div className="benefits-container">
-          <h2 className="benefits-heading">Benefits at a glance</h2>
+          <Reveal width="100%">
+            <h2 className="benefits-heading">Benefits at a glance</h2>
+          </Reveal>
 
           <div className="benefits-layout">
             {/* Left Side Benefits */}
@@ -59,16 +79,20 @@ const BenefitsSection = () => {
               {benefits
                 .filter(benefit => benefit.position.startsWith('left'))
                 .map((benefit, index) => (
-                  <div key={index} className="benefit-card">
-                    <div
-                      className="benefit-icon-wrapper"
-                      style={{ background: benefit.gradient }}
-                    >
-                      {benefit.icon}
+                  <Reveal key={index} delay={index * 0.2}>
+                    <div className="benefit-card">
+                      <div className="benefit-icon-wrapper">
+                        {React.cloneElement(benefit.icon, {
+                          stroke: `url(#${index === 0 ? 'icon-gradient' : 'blue-purple-gradient'})`,
+                          strokeWidth: 2
+                        })}
+                      </div>
+                      <div className="benefit-content">
+                        <h3 className="benefit-title">{benefit.title}</h3>
+                        <p className="benefit-subtext">{benefit.subtext}</p>
+                      </div>
                     </div>
-                    <h3 className="benefit-title">{benefit.title}</h3>
-                    <p className="benefit-subtext">{benefit.subtext}</p>
-                  </div>
+                  </Reveal>
                 ))}
             </div>
 
@@ -99,16 +123,20 @@ const BenefitsSection = () => {
               {benefits
                 .filter(benefit => benefit.position.startsWith('right'))
                 .map((benefit, index) => (
-                  <div key={index} className="benefit-card">
-                    <div
-                      className="benefit-icon-wrapper"
-                      style={{ background: benefit.gradient }}
-                    >
-                      {benefit.icon}
+                  <Reveal key={index} delay={index * 0.2}>
+                    <div className="benefit-card">
+                      <div className="benefit-icon-wrapper">
+                        {React.cloneElement(benefit.icon, {
+                          stroke: "url(#purple-light-gradient)",
+                          strokeWidth: 2
+                        })}
+                      </div>
+                      <div className="benefit-content">
+                        <h3 className="benefit-title">{benefit.title}</h3>
+                        <p className="benefit-subtext">{benefit.subtext}</p>
+                      </div>
                     </div>
-                    <h3 className="benefit-title">{benefit.title}</h3>
-                    <p className="benefit-subtext">{benefit.subtext}</p>
-                  </div>
+                  </Reveal>
                 ))}
             </div>
           </div>
