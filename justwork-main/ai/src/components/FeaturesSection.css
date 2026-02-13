@@ -8,6 +8,8 @@
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+  position: relative;
+  z-index: 20;
 }
 
 .features-container.visible {
@@ -95,16 +97,16 @@
   .features {
     padding: 60px 0;
   }
-  
+
   .feature-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .feature-content h3 {
     font-size: 24px;
   }
-  
+
   .feature-image {
     height: 140px;
   }
@@ -114,19 +116,19 @@
   .features {
     padding: 40px 0;
   }
-  
+
   .feature-content {
     padding: 20px;
   }
-  
+
   .feature-content h3 {
     font-size: 20px;
   }
-  
+
   .feature-content p {
     font-size: 14px;
   }
-  
+
   .feature-image {
     height: 120px;
   }

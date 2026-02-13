@@ -8,6 +8,8 @@
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+  position: relative;
+  z-index: 20;
 }
 
 .integrations-container.visible {
@@ -56,6 +58,7 @@
   0% {
     stroke-dashoffset: 0;
   }
+
   100% {
     stroke-dashoffset: 130;
   }
@@ -109,14 +112,14 @@
 }
 
 .hub-icon {
-  width:2rem;
+  width: 2rem;
   height: 2rem;
 
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 .hub-content {
@@ -195,16 +198,16 @@
     grid-template-columns: 1fr;
     gap: 50px;
   }
-  
+
   .integrations-content {
     padding-left: 0;
     text-align: center;
   }
-  
+
   .integrations-content h2 {
     font-size: 48px;
   }
-  
+
   .diagram-background {
     padding: 60px 40px;
   }
@@ -214,21 +217,21 @@
   .integrations {
     padding: 60px 0;
   }
-  
+
   .integrations-content h2 {
     font-size: 42px;
   }
-  
+
   .diagram-background {
     padding: 50px 30px;
     min-height: 400px;
   }
-  
+
   .app-icon {
     width: 56px;
     height: 56px;
   }
-  
+
   .hub-icon {
     width: 80px;
     height: 80px;
@@ -239,26 +242,26 @@
   .integrations {
     padding: 40px 0;
   }
-  
+
   .integrations-content h2 {
     font-size: 36px;
   }
-  
+
   .diagram-background {
     padding: 40px 20px;
   }
-  
+
   .icon-row {
     flex-wrap: wrap;
     gap: 12px;
     justify-content: center;
   }
-  
+
   .app-icon {
     width: 48px;
     height: 48px;
   }
-  
+
   .testimonial {
     font-size: 18px;
   }

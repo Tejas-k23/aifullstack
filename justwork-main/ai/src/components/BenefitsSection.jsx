@@ -47,6 +47,8 @@ const BenefitsSection = () => {
 
   return (
     <section className="benefits-section" id="benefits">
+
+        <div className="noise-overlay" aria-hidden="true"></div>
       <div className="container">
         <div className="benefits-container">
         <h2 className="benefits-heading">Benefits at a glance</h2>
@@ -71,7 +73,8 @@ const BenefitsSection = () => {
           </div>
 
           {/* Center iPhone Mockup */}
-          <div className="phone-mockup-container">
+
+          <div className="phone-mockup-container ">
             <div className="iphone-mockup">
               <div className="iphone-frame">
                 <div className="iphone-notch"></div>

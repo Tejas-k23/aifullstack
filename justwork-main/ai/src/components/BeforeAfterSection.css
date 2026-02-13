@@ -9,6 +9,8 @@
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+  position: relative;
+  z-index: 20;
 }
 
 .compare-container.visible {
@@ -144,12 +146,12 @@
   .compare {
     padding: 60px 0;
   }
-  
+
   .compare h2 {
     font-size: 56px;
     margin-bottom: 50px;
   }
-  
+
   .slider-container {
     aspect-ratio: 1 / 1;
     border-radius: 24px;
@@ -227,15 +229,15 @@
     gap: 16px;
     margin-top: 30px;
   }
-  
+
   .compare-card {
     width: 160px;
   }
-  
+
   .compare-card-image {
     height: 100px;
   }
-  
+
   .compare-card-subtitle {
     font-size: 13px;
     margin-top: 10px;
@@ -246,40 +248,40 @@
   .compare {
     padding: 40px 0;
   }
-  
+
   .compare h2 {
     font-size: 42px;
     margin-bottom: 40px;
   }
-  
+
   .slider-container {
     aspect-ratio: 1 / 1;
     border-radius: 20px;
   }
-  
+
   .handle-circle {
     width: 50px;
     height: 50px;
   }
-  
+
   .label {
     font-size: 12px;
     padding: 6px 12px;
   }
-  
+
   .compare-cards {
     gap: 12px;
     margin-top: 24px;
   }
-  
+
   .compare-card {
     width: 120px;
   }
-  
+
   .compare-card-image {
     height: 80px;
   }
-  
+
   .compare-card-subtitle {
     font-size: 12px;
     margin-top: 8px;

@@ -8,11 +8,11 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  
+
   color-scheme: light;
   color: #000000;
   background-color: #ffffff;
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,9 +51,10 @@ button {
   margin: 0;
   padding: 0;
 }
+
 .noise-overlay {
   position: fixed;
-  inset: -50%; 
+  inset: -50%;
   width: 200%;
   height: 200%;
   pointer-events: none;
@@ -62,14 +63,14 @@ button {
   background-repeat: repeat;
   background-size: 250px 250px;
   mix-blend-mode: overlay;
-  
+
   /* CHANGE THESE THREE LINES */
-  opacity: 0.9; 
+  opacity: 0.9;
   animation: grain 2s steps(1) infinite;
   will-change: transform;
 }
 
-@keyframes grain {
+/* @keyframes grain {
   0%, 100% { transform: translate(0, 0); }
   10% { transform: translate(-1%, -1%); }
   20% { transform: translate(-2%, 1%); }
@@ -80,14 +81,21 @@ button {
   70% { transform: translate(0%, 2%); }
   80% { transform: translate(1%, 2%); }
   90% { transform: translate(-1%, 1%); }
-}
+} */
 
 img,
 .phone-mockup,
 .phone-mockup-container,
 .iphone-mockup,
 .iphone-frame,
-.iphone-screen {
+.iphone-screen,
+.slider-container,
+.diagram-background,
+.compare-card,
+.feature-image,
+.image-container,
+.integrations-container,
+.compare-container {
   position: relative;
   z-index: 20;
   isolation: isolate;
@@ -109,6 +117,7 @@ img,
 }
 
 @media (max-width: 640px) {
+
   html,
   body,
   #root,
@@ -117,7 +126,7 @@ img,
     width: 100%;
     max-width: 100%;
   }
-  
+
   .framer-badge {
     bottom: 10px;
     right: 10px;

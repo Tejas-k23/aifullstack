@@ -14,7 +14,9 @@ const HeroSection = () => {
   }, [mobileImages.length]);
 
   return (
+     
     <section className="hero " id="home">
+       {/* <div className="noise-overlay" aria-hidden="true"></div> */}
       <div className="container">
         <div className="hero-wrapper">
           <div className="hero-content">
