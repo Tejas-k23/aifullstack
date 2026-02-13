@@ -10,8 +10,26 @@
   font-weight: 400;
 
   color-scheme: light;
-  color: #000000;
-  background-color: #ffffff;
+
+  /* Color System */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --bg-accent: #EEEDF5;
+  --bg-accent-light: #F0EBFF;
+
+  --primary: #0066ff;
+  --primary-hover: #0052cc;
+  --primary-soft: rgba(0, 102, 255, 0.1);
+  --accent: #8B5CF6;
+
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

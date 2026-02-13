@@ -1,6 +1,6 @@
 .pricing-section {
   padding: 100px 0;
-  background: #fafafa;
+  background: var(--bg-secondary);
   width: 100%;
 }
 
@@ -15,7 +15,7 @@
   font-size: 64px;
   font-weight: 700;
   text-align: center;
-  color: #000;
+  color: var(--text-primary);
   margin-bottom: 40px;
   letter-spacing: -0.02em;
   line-height: 1.05;
@@ -31,12 +31,12 @@
 .toggle-label {
   font-size: 16px;
   font-weight: 500;
-  color: #666;
+  color: var(--text-secondary);
   transition: color 0.3s ease;
 }
 
 .toggle-label.active {
-  color: #0D7AFF;
+  color: var(--primary);
   font-weight: 600;
 }
 
@@ -57,11 +57,11 @@
 }
 
 .toggle-switch.yearly {
-  background: #0D7AFF;
+  background: var(--primary);
 }
 
 .toggle-switch.yearly:hover {
-  background: #0B6AE6;
+  background: var(--primary-hover);
 }
 
 .toggle-slider {
@@ -105,10 +105,10 @@
 }
 
 .pricing-card.pro-card {
-  background: #F7F9FC;
-  color: #000;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   transform: scale(1.05);
-  box-shadow: 0 8px 32px rgba(13, 122, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.2);
 }
 
 .pricing-card.pro-card:hover {
@@ -214,14 +214,14 @@
 }
 
 .plan-button.primary {
-  background: #0D7AFF;
+  background: var(--primary);
   color: #fff;
 }
 
 .plan-button.primary:hover {
-  background: #0B6AE6;
+  background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(13, 122, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
 }
 
 .plan-button.white {

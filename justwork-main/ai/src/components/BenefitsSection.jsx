@@ -48,71 +48,71 @@ const BenefitsSection = () => {
   return (
     <section className="benefits-section" id="benefits">
 
-        <div className="noise-overlay" aria-hidden="true"></div>
+      <div className="noise-overlay" aria-hidden="true"></div>
       <div className="container">
         <div className="benefits-container">
-        <h2 className="benefits-heading">Benefits at a glance</h2>
-        
-        <div className="benefits-layout">
-          {/* Left Side Benefits */}
-          <div className="benefits-left">
-            {benefits
-              .filter(benefit => benefit.position.startsWith('left'))
-              .map((benefit, index) => (
-                <div key={index} className="benefit-card">
-                  <div 
-                    className="benefit-icon-wrapper"
-                    style={{ background: benefit.gradient }}
-                  >
-                    {benefit.icon}
+          <h2 className="benefits-heading">Benefits at a glance</h2>
+
+          <div className="benefits-layout">
+            {/* Left Side Benefits */}
+            <div className="benefits-left">
+              {benefits
+                .filter(benefit => benefit.position.startsWith('left'))
+                .map((benefit, index) => (
+                  <div key={index} className="benefit-card">
+                    <div
+                      className="benefit-icon-wrapper"
+                      style={{ background: benefit.gradient }}
+                    >
+                      {benefit.icon}
+                    </div>
+                    <h3 className="benefit-title">{benefit.title}</h3>
+                    <p className="benefit-subtext">{benefit.subtext}</p>
                   </div>
-                  <h3 className="benefit-title">{benefit.title}</h3>
-                  <p className="benefit-subtext">{benefit.subtext}</p>
-                </div>
-              ))}
-          </div>
+                ))}
+            </div>
 
-          {/* Center iPhone Mockup */}
+            {/* Center iPhone Mockup */}
 
-          <div className="phone-mockup-container ">
-            <div className="iphone-mockup">
-              <div className="iphone-frame">
-                <div className="iphone-notch"></div>
-                <div className="iphone-screen">
-                  <div className="photo-display">
-                    {mobileImages.map((image, index) => (
-                      <img 
-                        key={index}
-                        src={image}
-                        alt={`App Interface ${index + 1}`}
-                        className={`editing-photo ${index === currentImageIndex ? 'active' : ''}`}
-                      />
-                    ))}
+            <div className="phone-mockup-container ">
+              <div className="iphone-mockup">
+                <div className="iphone-frame">
+                  <div className="iphone-notch"></div>
+                  <div className="iphone-screen">
+                    <div className="photo-display">
+                      {mobileImages.map((image, index) => (
+                        <img
+                          key={index}
+                          src={image}
+                          alt={`App Interface ${index + 1}`}
+                          className={`editing-photo ${index === currentImageIndex ? 'active' : ''}`}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Right Side Benefits */}
-          <div className="benefits-right">
-            {benefits
-              .filter(benefit => benefit.position.startsWith('right'))
-              .map((benefit, index) => (
-                <div key={index} className="benefit-card">
-                  <div 
-                    className="benefit-icon-wrapper"
-                    style={{ background: benefit.gradient }}
-                  >
-                    {benefit.icon}
+            {/* Right Side Benefits */}
+            <div className="benefits-right">
+              {benefits
+                .filter(benefit => benefit.position.startsWith('right'))
+                .map((benefit, index) => (
+                  <div key={index} className="benefit-card">
+                    <div
+                      className="benefit-icon-wrapper"
+                      style={{ background: benefit.gradient }}
+                    >
+                      {benefit.icon}
+                    </div>
+                    <h3 className="benefit-title">{benefit.title}</h3>
+                    <p className="benefit-subtext">{benefit.subtext}</p>
                   </div>
-                  <h3 className="benefit-title">{benefit.title}</h3>
-                  <p className="benefit-subtext">{benefit.subtext}</p>
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );

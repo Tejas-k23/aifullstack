@@ -1,6 +1,6 @@
 .benefits-section {
   padding: 100px 0;
-  background: #F8F9FB;
+  background: var(--bg-secondary);
   width: 100%;
 }
 
@@ -12,7 +12,7 @@
   font-size: 64px;
   font-weight: 700;
   text-align: center;
-  color: #000;
+  color: var(--text-primary);
   margin-bottom: 80px;
   letter-spacing: -0.02em;
   line-height: 1.05;
@@ -62,7 +62,7 @@
 .benefit-title {
   font-size: 24px;
   font-weight: 700;
-  color: #000;
+  color: var(--text-primary);
   margin-bottom: 12px;
   line-height: 1.2;
   text-align: center;
@@ -70,7 +70,7 @@
 
 .benefit-subtext {
   font-size: 16px;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
   text-align: center;
@@ -395,6 +395,7 @@
     font-size: 18px;
   }
 }
+
 .benefit-icon-wrapper {
   background: none !important;
 }

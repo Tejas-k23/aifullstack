@@ -1,6 +1,6 @@
 .hero {
   padding: 80px 0;
-  background: linear-gradient(180deg, #fafafa 0%, #F0EBFF 100%);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-accent-light) 100%);
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   font-size: 80px;
   font-weight: 700;
   line-height: 1.05;
-  color: #000;
+  color: var(--text-primary);
   margin-bottom: 24px;
   letter-spacing: -0.02em;
   opacity: 0;
@@ -27,7 +27,7 @@
 
 .hero-content p {
   font-size: 22px;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 40px;
   max-width: 640px;
   line-height: 1.5;
@@ -45,7 +45,7 @@
 }
 
 .btn-primary {
-  background: #0066FF;
+  background: var(--primary);
   color: #fff;
   padding: 16px 32px;
   border-radius: 999px;
@@ -62,7 +62,7 @@
 }
 
 .btn-primary:hover {
-  background: #0052CC;
+  background: var(--primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 102, 255, 0.3);
 }
@@ -87,7 +87,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid var(--bg-primary);
   margin-left: -12px;
   object-fit: cover;
 }
@@ -97,7 +97,7 @@
 }
 
 .social-proof span {
-  color: #666;
+  color: var(--text-muted);
   font-size: 16px;
   font-weight: 500;
 }
@@ -116,7 +116,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #666;
+  color: var(--text-muted);
   font-size: 14px;
   font-weight: 500;
 }
@@ -184,25 +184,25 @@
     grid-template-columns: 1fr;
     text-align: center;
   }
-  
+
   .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .hero-content h1 {
     font-size: 56px;
   }
-  
+
   .hero-content p {
     max-width: 100%;
   }
-  
+
   .awards {
     justify-content: center;
   }
-  
+
   .social-proof {
     justify-content: center;
   }
@@ -213,22 +213,23 @@
     padding: 40px 0;
     min-height: auto;
   }
-  
+
   .hero-content h1 {
     font-size: 42px;
   }
-  
+
   .hero-content p {
     font-size: 18px;
   }
-  
+
   .phone-mockup {
     max-width: 250px;
   }
 }
+
 .noise-overlay {
   position: fixed;
-  inset: -50%; 
+  inset: -50%;
   width: 200%;
   height: 200%;
   pointer-events: none;
@@ -237,9 +238,9 @@
   background-repeat: repeat;
   background-size: 250px 250px;
   mix-blend-mode: overlay;
-  
+
   /* CHANGE THESE THREE LINES */
-  opacity: 0.9; 
+  opacity: 0.9;
   animation: grain 2s steps(1) infinite;
   will-change: transform;
 }
@@ -256,4 +257,3 @@
   80% { transform: translate(1%, 2%); }
   90% { transform: translate(-1%, 1%); }
 } */
-

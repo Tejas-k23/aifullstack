@@ -1,5 +1,5 @@
 .features {
-  background: #fafafa;
+  background: var(--bg-secondary);
   padding: 80px 0;
 }
 
@@ -28,7 +28,7 @@
   overflow: hidden;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease, opacity 0.4s ease, transform 0.4s ease;
-  background: #fff;
+  background: var(--bg-primary);
   display: flex;
   flex-direction: column;
   opacity: 1;
@@ -58,11 +58,11 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: #fafafa;
+  background: var(--bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0066FF;
+  color: var(--primary);
 }
 
 .feature-content h3 {
@@ -74,7 +74,7 @@
 }
 
 .feature-content p {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 16px;
   line-height: 1.5;
   margin: 0;

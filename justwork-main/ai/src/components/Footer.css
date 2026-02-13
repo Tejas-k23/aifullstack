@@ -1,5 +1,5 @@
 .footer {
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   padding: 80px 0 40px;
   margin-top: 0;
 }
@@ -24,7 +24,7 @@
 .footer-brand {
   font-size: 28px;
   font-weight: 800;
-  color: #000;
+  color: var(--text-primary);
   margin: 0;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -32,7 +32,7 @@
 
 .footer-tagline {
   font-size: 16px;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
   line-height: 1.5;
 }
@@ -42,7 +42,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-  background: #0066FF;
+  background: var(--primary);
   color: #fff;
   border: none;
   border-radius: 999px;
@@ -55,7 +55,7 @@
 }
 
 .footer-button:hover {
-  background: #0052CC;
+  background: var(--primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
 }
@@ -98,7 +98,7 @@
 }
 
 .footer-links a:hover {
-  color: #0066FF;
+  color: var(--primary);
 }
 
 .footer-social {
@@ -125,7 +125,7 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border);
   padding-top: 32px;
   text-align: center;
 }

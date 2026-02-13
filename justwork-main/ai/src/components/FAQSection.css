@@ -1,6 +1,6 @@
 .faq-section {
   padding: 100px 0;
-  background: #fafafa;
+  background: var(--bg-secondary);
   width: 100%;
 }
 
@@ -27,7 +27,7 @@
 .faq-dot {
   width: 8px;
   height: 8px;
-  background: #0D7AFF;
+  background: var(--primary);
   border-radius: 50%;
   display: inline-block;
 }
@@ -106,7 +106,7 @@
 }
 
 .faq-item.open .faq-icon {
-  color: #0D7AFF;
+  color: var(--primary);
 }
 
 .faq-answer-wrapper {
@@ -124,7 +124,7 @@
 .faq-answer {
   font-size: 16px;
   line-height: 1.6;
-  color: #666;
+  color: var(--text-secondary);
   margin: 0;
   padding-top: 8px;
 }
