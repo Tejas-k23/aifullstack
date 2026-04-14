@@ -22,10 +22,10 @@ const HeroSection = () => {
         <div className="hero-wrapper">
           <div className="hero-content">
             <Reveal>
-              <h1>AI Product Ads on WhatsApp</h1>
+              <h1>AI-Powered Marketing Images on WhatsApp</h1>
             </Reveal>
             <Reveal delay={0.4}>
-              <p>Send a product photo on WhatsApp. Get a professional marketing image in seconds.</p>
+              <p>Transform your product photos into high-quality ad marketing images using our AI agents. Send via WhatsApp and get professional results instantly.</p>
             </Reveal>
             <a href="#download" className="btn-primary">Try Free (3 Credits)</a>
             <div className="social-proof">
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 <img src="https://i.pravatar.cc/40?img=3" alt="User" />
                 <img src="https://i.pravatar.cc/40?img=4" alt="User" />
               </div>
-              <span>5,000+ Sellers Using ProductAI</span>
+              <span>5,000+ Businesses Using AIZone</span>
             </div>
             <div className="awards">
               <div className="award-badge">

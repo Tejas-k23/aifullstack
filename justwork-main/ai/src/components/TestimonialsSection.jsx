@@ -4,45 +4,45 @@ import './TestimonialsSection.css';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      platform: 'Android User',
-      username: '@marcobooks',
-      title: 'Bookstagram Creator',
-      quote: 'The background blur feature is incredible! My book photos look professional without any editing skills.',
+      platform: 'E-commerce Seller',
+      username: '@sarahshop',
+      title: 'Online Store Owner',
+      quote: 'AIZone\'s AI agents transformed our product photos overnight. Our ad conversions increased by 40% with these professional marketing images.',
       avatar: 'https://i.pravatar.cc/60?img=12'
     },
     {
-      platform: 'iOS User',
-      username: '@snapwithjen',
-      title: 'Travel Photographer',
-      quote: 'Color correction has never been easier. My travel photos now have that perfect Instagram-worthy look instantly.',
+      platform: 'D2C Brand',
+      username: '@techgadgets',
+      title: 'Electronics Retailer',
+      quote: 'No more expensive photographers! AIZone delivers high-quality marketing visuals instantly via WhatsApp. Perfect for our fast-paced business.',
       avatar: 'https://i.pravatar.cc/60?img=33'
     },
     {
-      platform: 'iOS User',
-      username: '@hannahhome',
-      title: 'Interior Blogger',
-      quote: 'Removing unwanted objects from my room photos is a game-changer. No more Photoshop needed!',
+      platform: 'Fashion Brand',
+      username: '@stylehub',
+      title: 'Fashion Boutique',
+      quote: 'The AI-enhanced images make our products look stunning. Our social media engagement has never been better since using AIZone.',
       avatar: 'https://i.pravatar.cc/60?img=47'
     },
     {
-      platform: 'iOS User',
-      username: '@fitwithlana',
-      title: 'Fitness Influencer',
-      quote: 'So easy to use! I can edit my workout photos in seconds and get back to training. Love it!',
+      platform: 'Local Business',
+      username: '@craftcorner',
+      title: 'Handmade Crafts Seller',
+      quote: 'As a small business owner, AIZone helps me compete with big brands. Professional marketing images without the high costs!',
       avatar: 'https://i.pravatar.cc/60?img=51'
     },
     {
-      platform: 'Android User',
-      username: '@theartofalina',
-      title: 'Digital Artist',
-      quote: 'The selfie and avatar features are amazing. My profile pictures have never looked better!',
+      platform: 'Startup Founder',
+      username: '@innovateco',
+      title: 'Tech Startup',
+      quote: 'AIZone\'s WhatsApp integration is genius. We get marketing-ready images in seconds, keeping our team focused on growth.',
       avatar: 'https://i.pravatar.cc/60?img=68'
     },
     {
-      platform: 'iOS User',
-      username: '@veganplate',
-      title: 'Food Creator',
-      quote: 'The filters make my food photos pop! My engagement has increased since I started using PixelTouch.',
+      platform: 'Marketing Agency',
+      username: '@admasters',
+      title: 'Digital Marketing Agency',
+      quote: 'We use AIZone for all our client campaigns. The AI quality is outstanding and saves us hours of design work.',
       avatar: 'https://i.pravatar.cc/60?img=70'
     }
   ];

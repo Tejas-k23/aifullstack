@@ -7,30 +7,30 @@ const FeaturesSection = () => {
   const allFeatures = [
     {
       icon: <Wand2 size={32} />,
-      title: 'WhatsApp Native Integration',
-      description: 'Send product images directly on WhatsApp. No apps, no logins. Just snap, send, and get professional ads instantly.',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop',
+      title: 'WhatsApp AI Agent Integration',
+      description: 'Connect with our AI agents directly on WhatsApp. Send your product images and receive enhanced marketing visuals instantly through chat.',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop', // AI/robot image
       bgGradient: '#F5F7FF'
     },
     {
       icon: <Sliders size={32} />,
-      title: 'AI-Quality Marketing Images',
-      description: 'Our AI generates stunning, campaign-ready images that look professionally designed. Perfect for Instagram, website, and ads.',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&h=600&fit=crop',
+      title: 'AI-Enhanced Marketing Images',
+      description: 'Our advanced AI transforms ordinary product photos into stunning, conversion-optimized marketing images perfect for ads, social media, and e-commerce.',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop', // Marketing/analytics
       bgGradient: '#F8F9FB'
     },
     {
       icon: <Zap size={32} />,
-      title: 'Lightning Fast Processing',
-      description: 'Get your professional marketing images in seconds. No waiting, no delays. Instant results for your business needs.',
-      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&h=600&fit=crop',
+      title: 'Instant Processing',
+      description: 'Get your professionally enhanced images in seconds. No waiting for designers or complex software - just send and receive via WhatsApp.',
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop', // Fast technology
       bgGradient: '#FFF5F9'
     },
     {
       icon: <Sparkles size={32} />,
-      title: 'Multiple Design Variations',
-      description: 'Receive multiple design options for each product. Choose your favorite style or use them all across different platforms.',
-      image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&h=600&fit=crop',
+      title: 'Multiple Style Variations',
+      description: 'Receive multiple AI-generated variations for each image. Choose from different styles, backgrounds, and compositions to match your brand.',
+      image: 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=800&h=600&fit=crop', // Creative design
       bgGradient: '#F0FDF4'
     }
   ];

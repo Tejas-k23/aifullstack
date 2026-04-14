@@ -19,29 +19,29 @@ const BenefitsSection = () => {
     {
       position: 'left-top',
       icon: <Wand2 size={32} />,
-      title: 'Smart Editing',
-      subtext: 'Powerful tools that make editing fast and effortless.',
+      title: 'AI-Powered Enhancement',
+      subtext: 'Advanced AI transforms your product photos into professional marketing images automatically.',
       gradient: 'linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%)'
     },
     {
       position: 'left-bottom',
       icon: <Palette size={32} />,
-      title: 'Creative Freedom',
-      subtext: 'Filters overlays to unlock endless creative possibilities.',
+      title: 'Marketing Optimization',
+      subtext: 'Images optimized for conversions with perfect lighting, composition, and branding.',
       gradient: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)'
     },
     {
       position: 'right-top',
       icon: <Smartphone size={32} />,
-      title: 'Made for Mobile',
-      subtext: 'Optimized for speed and editing anytime, anywhere.',
+      title: 'WhatsApp Integration',
+      subtext: 'Seamless communication with AI agents directly through WhatsApp for instant results.',
       gradient: 'linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)'
     },
     {
       position: 'right-bottom',
       icon: <Share2 size={32} />,
-      title: 'Share Instantly',
-      subtext: 'Export high-quality images and share with one click.',
+      title: 'Business Growth',
+      subtext: 'Higher conversion rates and engagement with professionally enhanced marketing visuals.',
       gradient: 'linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%)'
     }
   ];

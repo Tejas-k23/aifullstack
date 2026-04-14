@@ -10,8 +10,8 @@ const Footer = () => {
         <div className="footer-grid">
           {/* Column 1 - Brand Section */}
           <div className="footer-column">
-            <h3 className="footer-brand">ProductAI</h3>
-            <p className="footer-tagline">AI Product Ads on WhatsApp - Professional marketing images in seconds</p>
+            <h3 className="footer-brand">AIZone</h3>
+            <p className="footer-tagline">AI Services Credit Management Platform - Transform images into marketing gold with WhatsApp AI agents</p>
             <button className="footer-button">
               Get started
               <ArrowRight size={16} />
@@ -63,7 +63,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <p className="footer-copyright">© ProductAI 2025. All rights reserved.</p>
+          <p className="footer-copyright">© AIZone 2025. All rights reserved.</p>
         </div>
       </div>
       </div>

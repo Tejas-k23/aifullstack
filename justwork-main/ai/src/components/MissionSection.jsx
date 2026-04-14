@@ -3,9 +3,9 @@ import Reveal from './Reveal';
 import './MissionSection.css';
 
 const stats = [
-  { value: 50000, suffix: '+', label: 'Images Generated' },
-  { value: 95, suffix: '%', label: 'Seller Satisfaction' },
-  { value: 10, suffix: '+', label: 'Countries Operating In' }
+  { value: 100000, suffix: '+', label: 'Images Enhanced' },
+  { value: 98, suffix: '%', label: 'Business Satisfaction' },
+  { value: 25, suffix: '+', label: 'Countries Served' }
 ];
 
 const MissionSection = () => {
@@ -110,7 +110,7 @@ const MissionSection = () => {
         <div className="mission-container">
           <Reveal width="100%">
             <p ref={textRef} className={`mission-text ${isTextVisible ? 'visible' : ''}`}>
-              We're on a mission to help small businesses create <span className="highlight">professional marketing images</span> without design skills. With <span className="highlight">AI-powered</span> generation and WhatsApp convenience, ProductAI turns product photos into ad-ready visuals in seconds.
+              We're on a mission to help small businesses create <span className="highlight">professional marketing images</span> without design skills. With <span className="highlight">AI-powered</span> generation and WhatsApp convenience, AIZone turns product photos into ad-ready visuals in seconds.
             </p>
           </Reveal>
           <div className="stats">

@@ -14,16 +14,16 @@ const BeforeAfterSection = () => {
     {
       before: '/before1.png',
       after: '/after.png',
-      subtitle: 'Product Photography'
+      subtitle: 'Product Photography Enhancement'
     },
     {
-      before: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&h=700&fit=crop',
-      after: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=700&fit=crop',
-      subtitle: 'E-commerce Images'
+      before: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=700&fit=crop', // Sneakers
+      after: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1200&h=700&fit=crop', // Enhanced sneakers
+      subtitle: 'E-commerce Product Images'
     },
     {
-      before: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1200&h=700&fit=crop',
-      after: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=700&fit=crop',
+      before: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&h=700&fit=crop', // Headphones
+      after: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=1200&h=700&fit=crop', // Enhanced headphones
       subtitle: 'Marketing Assets'
     }
   ];

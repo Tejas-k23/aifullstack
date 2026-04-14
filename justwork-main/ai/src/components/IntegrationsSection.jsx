@@ -143,7 +143,7 @@ const IntegrationsSection = () => {
               <h2>Works with Your Favorite Tools</h2>
               <button className="integrations-btn">View all integrations</button>
               <blockquote className="testimonial">
-                "ProductAI turned our product photography workflow around. We get professional images in minutes instead of days. Game changer for our D2C business."
+                "AIZone transformed our marketing image creation process. Our WhatsApp AI agents deliver high-quality visuals instantly, saving us time and boosting conversions."
               </blockquote>
               <div className="testimonial-author">
                 <div className="author-avatar"></div>

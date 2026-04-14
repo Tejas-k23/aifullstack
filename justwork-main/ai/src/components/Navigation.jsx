@@ -42,7 +42,7 @@ const Navigation = () => {
         <div className="navbar-content">
           <div className="logo">
             <div className="star"></div>
-            <span>PixelTouch</span>
+            <span>AIZone</span>
           </div>
           <div className={`nav-center ${isMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#home" onClick={closeMenu}>Home</a>

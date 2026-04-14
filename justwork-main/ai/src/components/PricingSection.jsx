@@ -10,54 +10,55 @@ const PricingSection = () => {
 
   const plans = [
     {
-      name: 'Free',
-      price: 0,
+      name: 'Starter',
+      price: 4.99,
       period: isYearly ? 'year' : 'month',
-      subtitle: 'Perfect for getting started',
-      buttonText: 'Try it for Free',
+      subtitle: 'Perfect for small businesses',
+      buttonText: 'Get 10 Credits',
       buttonStyle: 'primary',
       features: [
-        'Basic editing tools',
-        '10+ filters',
-        'Export in HD',
-        'Limited background remover',
-        'No watermark'
+        '10 AI image enhancements',
+        'WhatsApp integration',
+        'Basic marketing styles',
+        'HD quality exports',
+        'Email support'
       ],
       isPro: false,
       isStudio: false,
       packageId: 1
     },
     {
-      name: 'Pro',
-      price: 9.99,
+      name: 'Professional',
+      price: 19.99,
       period: isYearly ? 'year' : 'month',
-      subtitle: 'For creators who want more',
-      buttonText: 'Upgrade to Pro',
+      subtitle: 'For growing businesses',
+      buttonText: 'Get 50 Credits',
       buttonStyle: 'white',
       features: [
-        'Everything in Free, plus',
-        'All AI tools unlocked',
-        'Face & object retouch',
-        '30+ filters & styles',
-        '50 GB cloud storage'
+        '50 AI image enhancements',
+        'Priority WhatsApp processing',
+        'Advanced marketing styles',
+        'Multiple variations per image',
+        'Custom branding options'
       ],
       isPro: true,
       isStudio: false,
       packageId: 2
     },
     {
-      name: 'Studio',
-      price: 29,
+      name: 'Enterprise',
+      price: 79.99,
       period: isYearly ? 'year' : 'month',
-      subtitle: 'For businesses and power users',
-      buttonText: 'Go Studio',
+      subtitle: 'For large businesses and agencies',
+      buttonText: 'Get 200 Credits',
       buttonStyle: 'primary',
       features: [
-        'Everything in Pro, plus',
-        'Custom avatars & branding',
-        'Unlimited cloud projects',
-        'Team access (up to 5 users)',
-        'Commercial license'
+        '200 AI image enhancements',
+        'Dedicated AI agents',
+        'Bulk processing',
+        'API access',
+        'White-label solutions',
+        'Priority support'
       ],
       isPro: false,
       isStudio: true,

@@ -8,18 +8,18 @@ const CategorySection = () => {
 
   const categories = [
     {
-      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=400&fit=crop',
-      label: 'Portrait',
+      image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
+      label: 'E-commerce',
       color: '#0066FF'
     },
     {
-      image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&h=400&fit=crop',
-      label: 'Landscape',
+      image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop',
+      label: 'Fashion',
       color: '#666666'
     },
     {
-      image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=400&fit=crop',
-      label: 'Old Photos',
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop',
+      label: 'Food & Beverage',
       color: '#666666'
     }
   ];

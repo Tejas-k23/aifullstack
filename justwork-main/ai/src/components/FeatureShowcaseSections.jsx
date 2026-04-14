@@ -7,14 +7,14 @@ const FeatureShowcaseSections = () => {
   const FeatureContent = () => (
     <div className="feature-content-left">
       <Reveal>
-        <span className="feature-label">Background Remove</span>
+        <span className="feature-label">AI Image Enhancement</span>
       </Reveal>
       <Reveal delay={0.3}>
-        <h2 className="feature-heading">Instant background removal with us</h2>
+        <h2 className="feature-heading">Transform ordinary photos into marketing masterpieces</h2>
       </Reveal>
       <Reveal delay={0.5}>
         <p className="feature-description">
-          Our AI background remover quickly isolates your subject, giving you a sharp, professional every time.
+          Our AI agents analyze your product images and automatically enhance them for maximum marketing impact, with professional lighting, backgrounds, and styling.
         </p>
       </Reveal>
       <div className="feature-divider"></div>
@@ -22,13 +22,13 @@ const FeatureShowcaseSections = () => {
         <Reveal delay={0.6}>
           <div className="feature-item">
             <Star size={20} className="star-icon" />
-            <span>Remove clutter in seconds.</span>
+            <span>Automatic quality enhancement.</span>
           </div>
         </Reveal>
         <Reveal delay={0.7}>
           <div className="feature-item">
             <Star size={20} className="star-icon" />
-            <span>Get clean edges instantly.</span>
+            <span>Marketing-optimized compositions.</span>
           </div>
         </Reveal>
       </div>
@@ -40,8 +40,8 @@ const FeatureShowcaseSections = () => {
       <div className="image-container">
         <div className="checkered-background"></div>
         <img
-          src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=800&fit=crop"
-          alt="Person in light pink sweatshirt with removed background"
+          src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=800&fit=crop"
+          alt="AI-enhanced marketing image"
           className="feature-image"
         />
       </div>
@@ -54,7 +54,7 @@ const FeatureShowcaseSections = () => {
       <section className="feature-showcase-section background-remove-section">
         <div className="container">
           <Reveal width="100%">
-            <h2 className="section-heading-above">Pixeltouch pro features</h2>
+            <h2 className="section-heading-above">AIZone Pro Features</h2>
           </Reveal>
           <div className="feature-showcase-container">
             <div className="showcase-feature-card reverse">
